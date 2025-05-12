@@ -1,0 +1,24 @@
+{
+    "9c40819b-4a8f-468f-9ba5-4b9699f3361f": {
+        "id": "5ac62e2d-4438-4fe6-ab3a-87a1d6fd1758",
+        "name": "Charts",
+        "designId": "07923d1b-fe8d-49bf-ace0-76f746d4f76b",
+        "pluginId": "9c40819b-4a8f-468f-9ba5-4b9699f3361f",
+        "publicData": {}
+    },
+    "fdf6b667-9515-4086-87ef-6042fc6f20fb": {
+        "id": "392ae6e5-5f2f-462a-b3e8-8f9fd716dd67",
+        "designId": "07923d1b-fe8d-49bf-ace0-76f746d4f76b",
+        "pluginId": "fdf6b667-9515-4086-87ef-6042fc6f20fb",
+        "publicData": {}
+    },
+    "832d6f7a-42c3-43f1-a3ce-9a678272f811": {
+        "id": "43625d2b-07a2-440c-b5cf-8b30481926fa",
+        "name": "Date",
+        "designId": "07923d1b-fe8d-49bf-ace0-76f746d4f76b",
+        "pluginId": "832d6f7a-42c3-43f1-a3ce-9a678272f811",
+        "publicData": {
+            "favoriteFormat": "DD MMM YYYY"
+        }
+    }
+}

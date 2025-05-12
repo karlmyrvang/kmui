@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+ 
+<!-- wwFront:start -->
+<html class="ww-app-theme-dark" lang="<%= htmlWebpackPlugin.options.lang %>">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0" />
+        <base
+            href="<%= htmlWebpackPlugin.options.baseTag?.href %>"
+            target="<%= htmlWebpackPlugin.options.baseTag?.target %>"
+        />
+
+        <% if (htmlWebpackPlugin.options.title) { %>
+        <title><%= htmlWebpackPlugin.options.title %></title>
+        <% } %>
+
+        <link rel="icon" type="image/x-icon" href="favicon.ico?_wwcv=<%= htmlWebpackPlugin.options.cacheVersion %>" />
+
+        <link rel="manifest" href="manifest.json?_wwcv=10" />
+        <meta name="theme-color" content="" />
+        
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<style>:root{ --ww-default-font-family: 'Ubuntu', sans-serif }</style>
+        <style>
+:root {
+--34313772-e39b-4c5a-aed3-70be8fdf6a3e: #2AD100;
+--118ab1a8-abf2-4262-96e7-f39cb09c6867: #737373;
+--a7a02937-2c50-43ae-84aa-e25849ec75b3: #F5F5F5;
+--676830c4-abcd-4a64-9325-150ac0ed5af7: 400 16px/24px var(--ww-default-font-family, sans-serif);
+--24eac892-b3ac-491b-895f-bdfe30c2cc9a: #000000D9;
+--e1958da3-3ac9-439f-9c8e-6462b46080d6: 400 14px/20px var(--ww-default-font-family, sans-serif);
+--6047abe2-4b96-4a42-a6ad-68a09385e62c: #C9C9C980;
+--cbebc4e1-3d74-42f1-b341-1d71989aea7e: #303030;
+--f18dc11b-7b23-4b7d-9257-7729248cee09: 500 28px/normal var(--ww-default-font-family, sans-serif);
+--d728913f-d206-4511-93e6-bd77e99c7572: 500 14px/18px var(--ww-default-font-family, sans-serif);
+--06dd25dc-699d-4105-b03c-b84ad9b012ec: 500 12px/18px var(--ww-default-font-family, sans-serif);
+--2ce05ec8-3953-42ba-b047-cf3e941cef06: 400 12px/18px var(--ww-default-font-family, sans-serif);
+--d4118360-d050-4457-ad16-8a402f513f44: #7A7A7A66;
+--0fe07b36-45f1-46c5-b98b-8fd7e9ec2316: #FFFFFF;
+--4dcda4f4-dac5-4efa-b621-ac6b936e368e: #FFFFFF;
+--7fbcef58-971e-41f0-95e9-5f810372a04f: #D4D4D440;
+--8e84511a-9c4d-4411-89e6-7ecc6e1bd22e: #000000;
+--938f0b7f-bf47-49a7-b173-728f838b0f55: 4px;
+--6aa44e28-7f41-4fa6-933b-14ce97fa11ff: #DEDEDE33;
+--6e16a677-1ada-4c24-84af-d2b69f5996f4: 8px;
+--fc67747d-3e97-4a0d-8672-5e68346234b1: 8px;
+--79d921e5-3073-460c-a292-de67b9f10ebb: #C01616;
+--3cf1e7e9-ffce-40e8-9182-c2f2c21aeec0: #D18400;
+--149a6e26-d723-4fa0-a1fa-a35c194cc147: #0F93FF;
+--30f7191c-a988-43cd-a7de-1393d9d87500: #E6E6E6;
+--6db7a6e6-c3ec-486e-9dfd-a93227d46044: #1C1C1C;
+--f2c835c6-420a-4754-b141-6b6091cc181a: 12px;
+--a7cda7cb-9c40-4855-ba24-528917f09c19: 8px;
+--cc9e6068-10dd-4656-b6db-b29ee6973659: 16px;
+--386a5df0-3424-42ac-8fb5-51fdf6e0db89: 12px;
+--b6dc9191-8cc1-42bf-900e-3cc663b5442d: #F2F2F2;
+--ae9c2a0f-7af7-40d0-9440-bc4f0c02ce48: 1100px;
+--080b43c5-b246-4411-b162-f08dfd9bf15c: 36px;
+--3afae1bc-5a17-4f26-8f8c-8c48f9d18aac: 8px;
+--50f7ae5c-9dbc-4b26-b219-c36e4c058168: 500 24px/32px var(--ww-default-font-family, sans-serif);
+--ba25722f-2388-40f2-a003-5a35d5c6e1cb: 500 16px/24px var(--ww-default-font-family, sans-serif);
+--6c9fd0d5-de6e-4be1-a8ff-0b93e169124f: #B5B5B5;}
+.ww-app-theme-dark {
+--34313772-e39b-4c5a-aed3-70be8fdf6a3e: #2AD100;
+--118ab1a8-abf2-4262-96e7-f39cb09c6867: #878787;
+--a7a02937-2c50-43ae-84aa-e25849ec75b3: #1A1A1A;
+--24eac892-b3ac-491b-895f-bdfe30c2cc9a: #FFFFFF;
+--6047abe2-4b96-4a42-a6ad-68a09385e62c: #40404099;
+--cbebc4e1-3d74-42f1-b341-1d71989aea7e: #BFBFBF;
+--d4118360-d050-4457-ad16-8a402f513f44: #6B6B6B66;
+--0fe07b36-45f1-46c5-b98b-8fd7e9ec2316: #1F1F1F;
+--7fbcef58-971e-41f0-95e9-5f810372a04f: #8080801A;
+--8e84511a-9c4d-4411-89e6-7ecc6e1bd22e: #FFFFFF;
+--6aa44e28-7f41-4fa6-933b-14ce97fa11ff: #3D3D3D33;
+--79d921e5-3073-460c-a292-de67b9f10ebb: #C90D0D;
+--3cf1e7e9-ffce-40e8-9182-c2f2c21aeec0: #D18400;
+--149a6e26-d723-4fa0-a1fa-a35c194cc147: #0F93FF;
+--30f7191c-a988-43cd-a7de-1393d9d87500: #242424;
+--6db7a6e6-c3ec-486e-9dfd-a93227d46044: #1C1C1C;
+--b6dc9191-8cc1-42bf-900e-3cc663b5442d: #171717;}
+</style>
+        <link href="https://cdn.weweb.app/public/libs/weweb-icons/css/weweb-icons.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link href="https://cdn.weweb.app/public/libs/font-awesome/5.6.3/css/fontawesome.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link href="https://cdn.weweb.app/public/libs/font-awesome/5.6.3/css/fontawesome.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link href="https://cdn.weweb.app/public/libs/font-awesome/5.6.3/css/fontawesome.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link href="https://cdn.weweb.io/public/icons/heroicons/1.0.0/style.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link href="https://cdn.weweb.io/public/icons/phosphor/1.0.0/regular/phosphor-style.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <% for (let link of htmlWebpackPlugin.options?.alternateLinks || []) { %>
+        <link rel="<%= link.rel %>" hreflang="<%= link.hreflang %>" href="<%= link.href %>" />
+        <% } %> <% if (htmlWebpackPlugin.options.structuredData) { %>
+        <script type="application/ld+json">
+            <%= htmlWebpackPlugin.options.structuredData %>
+        </script>
+        <% } %> <%= htmlWebpackPlugin.options.scripts?.head %>
+    </head>
+    <body style="margin: 0; font-family: var(--ww-default-font-family, unset)">
+        <noscript>
+            <strong>
+                We're sorry but this website doesn't work properly without JavaScript enabled. Please enable it to
+                continue.
+            </strong>
+        </noscript>
+        <div id="app"></div>
+        <!-- built files will be auto injected -->
+        <%= htmlWebpackPlugin.options.scripts?.body %>
+    </body>
+</html>
+<!-- wwFront:end -->

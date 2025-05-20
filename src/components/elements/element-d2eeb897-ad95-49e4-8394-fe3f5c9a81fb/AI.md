@@ -47,6 +47,9 @@ A highly customizable data grid/table component that supports features like sort
    - `actionFontStyle`: `string`: Font style of the button in action column
    - `actionLineHeight`: `string`: Line height of the button in action column
    - `rowSelection`: `'none' | 'single' | 'multiple'` - Type of row selection. Default: `"none"`. Must be a semi transparent color, at it will be an overlay on top
+   - `enableClickSelection`: `Boolean` - True to enable selection on row click
+   - `disableCheckboxes`: `Boolean` - True to hide checkbox for selection
+   - `selectAll`: `'all' | 'currentPage' | 'filtered'` - Behavior of select all button
    - `pagination`: `boolean` - Enable/disable pagination. Default: `false`.
    - `paginationPageSize`: `number` - Number of rows per page. Default: `10`.
    - `initialFilters`: `{id: { filterType, type, filter } }` (Optional): An aggrid object describing the initial filtering. Here is an example: `{ id1: { filterType: "number", type: "greaterThan", filter: 50}}`
@@ -120,6 +123,7 @@ There is no children.
 - cellValueChanged: Triggered after a cell edition so that you can update the data source. Payload: { oldValue: {/* old value */}, newValue: { /* row data */}, columnId: "id", row: { /* row data */} }
 - rowSelected: triggered when a row is selected. Payload: { row: { /* row data */} }
 - rowDeselected: triggered when a row is deselected. Payload: { row: { /* row data */} }
+- rowClicked: Triggered when clicking on a row. Payload: { row: { /* row data */}, id: 0, index: 0, displayIndex: 0 }
 
 8. **Notes:**
 

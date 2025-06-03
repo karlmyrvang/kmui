@@ -1599,7 +1599,6 @@ export default {
             classes: true,
             bindable: true,
             responsive: true,
-            hidden: content => !content.showSearch,
         },
         optionFontSize: {
             type: 'Length',
@@ -1713,7 +1712,7 @@ export default {
                 en: 'background color',
             },
             type: 'Color',
-            defaultValue: 'white',
+            defaultValue: undefined,
             states: true,
             classes: true,
             bindable: true,

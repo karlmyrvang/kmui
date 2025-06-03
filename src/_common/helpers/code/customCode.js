@@ -1,6 +1,7 @@
 import { isObject } from 'lodash';
 import { computed } from 'vue';
 import { _wwFormulas } from '@/_common/helpers/code/wwFormulas';
+import { workflowFunctions } from '@/_common/helpers/code/workflows';
 
 const ERROR_CODES = {
     UNEXPECTED_END_OF_FORMULA: "Unexpected token ';'",
@@ -92,6 +93,8 @@ export async function executeCode(code, context, event, wwUtils) {
     const pluginVariables = wwLib.wwPlugins;
     // eslint-disable-next-line no-unused-vars
     const globalContext = wwLib.globalContext;
+    // eslint-disable-next-line no-unused-vars
+    const utilsFunctions = workflowFunctions;
 
     try {
         return await eval(`(async function () {${code}\n})()`);

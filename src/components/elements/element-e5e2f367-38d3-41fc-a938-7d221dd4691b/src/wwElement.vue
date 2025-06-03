@@ -283,7 +283,14 @@ export default {
                 const dataAxisValues = datasets.map(dataset => dataset.data.map(elem => elem[this.content.axis])).flat();
                 labels = [...new Set(dataAxisValues)];
             } else {
-                labels = this.content.labels;
+                if(!this.content.labels) {
+                    labels = [];
+                } else if(!Array.isArray(this.content.labels)) {
+                    // {0: 'label1', 1: 'label2'} => ['label1', 'label2']
+                    labels = Object.values(this.content.labels);
+                } else {
+                    labels = this.content.labels;
+                }
                 datasets = this.content.datasets || [];
             }
 

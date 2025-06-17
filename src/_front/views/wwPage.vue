@@ -31,8 +31,8 @@
 <script>
 import { computed, ref } from 'vue';
 import { mapGetters, useStore } from 'vuex';
-import wwPageLoadProgress from '@/_front/components/wwPageLoadProgress';
-import { getBackgroundStyle } from '@/_front/helpers/wwBackgroungStyle';
+import wwPageLoadProgress from '@/_front/components/wwPageLoadProgress.vue';
+import { getBackgroundStyle } from '@/_front/helpers/wwBackgroungStyle.js';
 import { usePopupStore } from '@/pinia/popup.js';
 import wwFrontPopup from '@/_front/components/wwFrontPopup.vue';
 

@@ -1430,9 +1430,8 @@ export const workflowFunctions = {
                 get(_target, workflowId) {
                     return async (...args) => {
                         // Get popup library component
-                        const libraryComponent = wwLib.$store.getters['libraries/getComponentsFromLibrary'][
-                            wwLib.$store.getters['libraries/getLibrary'].id
-                        ].find(e => e.id == context.component.baseUid && e.type == 'modal');
+                        const libraryComponent = Object.values(wwLib.$store.getters["libraries/getComponents"])
+                            ?.find(e => e.id == context.component.baseUid && e.type == 'modal');
                         if (!libraryComponent)
                             throw new Error(`Library component "${context.component.baseUid}" not found.`);
 

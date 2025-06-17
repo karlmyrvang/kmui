@@ -18,6 +18,9 @@ Renders a toggle switch for enabling/disabling options with click/tap interactio
 - selectorColorOn: string|null - On state selector color. Default: null. Mandatory
 - backgroundColorOff: string|null - Off state background color. Default: null. Mandatory
 - backgroundColorOn: string|null - On state background color. Default: null. Mandatory
+- fieldName: string - Form field name for identification. Default: ""
+- customValidation: boolean - Enable custom validation. Default: false
+- validation: Formula - Custom validation formula. Requires customValidation to be true!
 
 ***Exposed Variables:***
 - value: boolean - Current toggle state. (path: variables['current_element_uid-value'])

@@ -5,6 +5,13 @@ export default {
             fr: 'Toggle',
         },
         icon: 'toggle',
+        customSettingsPropertiesOrder: [
+            'formInfobox',
+            ['fieldName', 'customValidation', 'validation'],
+            'value',
+            'readonly',
+            'required',
+        ],
     },
     options: {
         ignoredStyleProperties: ['background'],
@@ -116,6 +123,36 @@ export default {
                 action: 'toggleValue',
             },
             editorOnly: true,
+        },
+        fieldName: {
+            label: 'Field name',
+            section: 'settings',
+            type: 'Text',
+            defaultValue: '',
+            bindable: true,
+            hidden: (_, sidePanelContent) => {
+                return !sidePanelContent.form?.uid;
+            },
+        },
+        customValidation: {
+            label: 'Custom validation',
+            section: 'settings',
+            type: 'OnOff',
+            defaultValue: false,
+            bindable: true,
+            hidden: (_, sidePanelContent) => {
+                return !sidePanelContent.form?.uid;
+            },
+        },
+        validation: {
+            label: 'Validation',
+            section: 'settings',
+            type: 'Formula',
+            defaultValue: '',
+            bindable: true,
+            hidden: (content, sidePanelContent) => {
+                return !sidePanelContent.form?.uid || !content.customValidation;
+            },
         },
     },
 };

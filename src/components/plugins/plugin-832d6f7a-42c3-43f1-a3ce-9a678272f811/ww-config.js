@@ -1,13 +1,4 @@
 export default {
-    editor: {
-        settings: {
-            edit: () => import('./src/components/SettingsEdit.vue'),
-            summary: () => import('./src/components/SettingsSummary.vue'),
-            getIsValid() {
-                return true;
-            },
-        },
-    },
     formulas: [
         {
             name: 'dateISO',

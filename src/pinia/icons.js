@@ -9,7 +9,7 @@ export const useIconsStore = defineStore('icons', () => {
             if (values[name]) {
                 return await values[name];
             }
-            const url = `/public/icons/${name}.svg`;
+            const url = `/icons/${name}.svg`;
             values[name] = fetch(url).then(response => {
                 if (!response.ok) {
                     return null;

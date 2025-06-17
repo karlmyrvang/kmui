@@ -40,5 +40,18 @@ Features:
 Events:
 - focus: Triggered when button receives focus. No payload.
 - blur: Triggered when button loses focus. No payload.
+- mousedown: Triggered when mouse button is pressed on the button. No payload.
+- mouseup: Triggered when mouse button is released on the button. No payload.
+- mouseleave: Triggered when mouse leaves the button area. No payload.
+- touchstart: Triggered when touch begins on the button (mobile). No payload.
+- touchend: Triggered when touch ends on the button (mobile). No payload.
+- touchcancel: Triggered when touch is cancelled (mobile). No payload.
+- keydown: Triggered when a key is pressed while button has focus. No payload.
+- keyup: Triggered when a key is released while button has focus. No payload.
+
+States:
+- focus: Applied when the button has focus.
+- disabled: Applied when the button is disabled.
+- active: Applied when the button is being pressed (during mousedown/touchstart/keydown).
 
 Variables: none

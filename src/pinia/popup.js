@@ -22,7 +22,7 @@ export const usePopupStore = defineStore('popups', () => {
     const instances = ref({});
 
     async function open(libraryComponentBaseId, content, { waitClosing = false } = {}) {
-        const uid = `popup-${createId()}`;
+        const uid = `popup-${createId.rnd()}`;
         instances.value[uid] = {
             uid,
             libraryComponentBaseId,

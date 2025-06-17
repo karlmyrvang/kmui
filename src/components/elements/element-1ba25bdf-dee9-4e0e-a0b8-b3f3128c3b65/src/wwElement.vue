@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { computed } from 'vue';
+import { computed, inject } from 'vue';
 
 export default {
     props: {
@@ -34,13 +34,26 @@ export default {
         wwElementState: { type: Object, required: true },
     },
     emits: ['update:content:effect', 'trigger-event', 'add-state', 'remove-state'],
-    setup(props) {
+    setup(props, { emit }) {
         const { value: variableValue, setValue } = wwLib.wwVariable.useComponentVariable({
             uid: props.uid,
             name: 'value',
             type: 'boolean',
             defaultValue: computed(() => (props.content.value === undefined ? false : props.content.value)),
         });
+
+        const useForm = inject('_wwForm:useForm', () => {});
+
+        const fieldName = computed(() => props.content.fieldName);
+        const validation = computed(() => props.content.validation);
+        const customValidation = computed(() => props.content.customValidation);
+        const required = computed(() => props.content.required);
+
+        useForm(
+            variableValue,
+            { fieldName, validation, customValidation, required, initialValue: computed(() => props.content.value) },
+            { elementState: props.wwElementState, emit, sidepanelFormPath: 'form', setValue }
+        );
 
         return { variableValue, setValue };
     },
